@@ -1,0 +1,116 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href='{% static "core/style.css" %}'>
+  <title>Ubicanos!</title>
+</head>
+<body>
+  <header>
+      <div class="logo">
+          <img id="huella" src="{% static 'core/img/huella.png' %}" alt="">
+          <a href="home" id="mascotitas" >Mascotitas</a>
+      </div>
+      <nav>
+        
+
+        <a href="login" class="nav-links">Login</a>
+        <a href="registro" class="nav-links">Registrarse</a>
+        <a href="carrito"><span id="carrito" class="material-icons">&#xe8cc</span></a>
+      </nav>
+  </header>
+
+  <div class="nav-2">
+    <div id="inicio">
+      <a href="/">Inicio</a>
+    </div>
+    <div id="comprar">
+      <a href="comprar">Comprar</a>  
+    </div>
+
+  </div>
+
+  <center style="margin-bottom: 1.2cm">
+    <main class="centrado">
+        <label for="compra">Ingrese codigo de compra para rastreo: </label>
+        <input type="text" id="compra"><button type="submit" id="rastreo">Buscar</button>
+        <br><br><br><br><br>
+        <h1 id="hola" style="font-size: 40px; margin-top: -2cm;"></h1>
+        <h1 id="adios" style="font-size: 40px; margin-bottom: 1cm;"></h2>
+        <h2 id="camino"  style="font-size: 25px; font-weight: 700; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></h2>
+        <img src="" alt="" id="img">
+    </main>
+       
+      
+  </center>
+
+
+
+  <br><br><br><br><br><br>
+    <footer>
+        <div class="container"> 
+            <div class="col">
+              <div id="links">
+                <a href="sobrenosotros">Sobre Nosotros.</a><br>
+                <a href="#">¡Ubícanos!</a>
+             </div>       
+            </div>
+            <div class="col">
+              <a href="https://instagram.com"><img id="insta" src="{% static 'core/img/insta.png' %}" alt="" style="height: 40px; padding-right: 10px; position: relative; bottom: 25px; right: -30px; float: right;"></a> 
+              <a href="https://facebook.com"><img id="face" src="{% static 'core/img/face.png' %}" alt="" style="height: 40px; padding-right: 5px; position: relative; bottom: 25px; right: -22px; float: right;"></a>
+              <a href="https://twitter.com"><img id="twitter" src="{% static 'core/img/twitter.png' %}" alt="" style="height: 40px; padding-right: 5px; position: relative; bottom: 25px; right: -20px; float: right;"></a>
+              <div id="copy">
+                &copy;Romina,Manuel,Felipe.
+              </div> 
+            </div>        
+            </div>
+          </div>
+      </footer>
+    </body>
+    </html>
+    <script>
+      var present = document.getElementById("copy");
+    function cambiarn (){
+        present.innerHTML = "<h4 style= 'color: rgb(225, 192, 46)';>Creadores de Proyecto</h4>";
+    }
+    function cambiarn1(){
+      present.innerHTML = "&copy;Romina,Manuel,Felipe.";
+    }
+    present.onmouseover = cambiarn;
+    present.onmouseout = cambiarn1;
+
+    
+        
+    var compra = document.getElementById('compra')
+    var btnRastreo = document.getElementById('rastreo')
+    var rut = document.getElementById('hola')
+    var monto = document.getElementById('adios')
+    var camino = document.getElementById('camino')
+    var img = document.createElement('img')
+    btnRastreo.addEventListener('click',()=>{
+       compra = compra.value
+       if(localStorage.getItem(compra)!=compra){
+            var local = localStorage.getItem(compra)
+            var array = JSON.parse(local)
+            rut.innerHTML = 'Rut de compra: '+array[0]
+            monto.innerHTML = 'Monto total de la compra: $'+array[1]
+            camino.innerHTML= 'Su pedido se está armando en bodega :) .......<br> Entregas sólo días hábiles'
+             img.src = '{% static "core/img/GifPick.gif" %}'
+             img.style = 'height:300px;width: 300px'
+             document.querySelector('.centrado').appendChild(img)
+       }else{
+        alert('Código de compra incorrecto o no existe.')
+       }
+    })
+    </script>
+</body>
+</html>

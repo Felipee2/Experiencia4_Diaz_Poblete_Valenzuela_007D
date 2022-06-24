@@ -1,0 +1,342 @@
+/*Imports Fuentes personalizadas*/
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/**/
+#marcas{
+    position: relative;
+    right: -6cm;
+}
+
+body{
+    margin: 0;
+    background-color: #eee5e5;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #723195;
+    align-items: center;
+
+}
+
+.summary{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+}.summary button{
+    text-decoration: none;
+    background-color: #723195;
+    color: white;
+    margin-bottom: 10px;
+}.summary button:hover{
+    color:white;
+    height: 39px;
+    transition: 1s;
+    font-size: 19px;
+}.summary div{
+    margin-bottom: 15px;
+}
+
+
+footer{
+    background-color: #723195;
+    height: 100px;
+    position: relative;
+    bottom: -6px;
+}
+#carrito{
+    position: fixed;
+    top: 15px;
+    right: 0.5%;
+}
+#huella{
+    height: 30px;
+    padding-right: 8px; 
+}
+#mascotitas{
+    font-size: 25px;
+    text-decoration: none;
+    color: #f3f2f2;
+    font-family: 'Bungee Shade', cursive;
+
+}
+.logo{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#royal{
+    height: 100px;
+}
+
+#webpay{
+    height: 80px;
+    width: 180px;
+    
+}
+#redes{
+    display: flex;
+    float: right;
+}
+#copy{
+    text-align: center;
+    color: rgb(229, 210, 210);
+    position: relative; bottom: 15px; right: -100px;
+}
+#links a{
+    text-decoration: none;
+    color: rgb(225, 192, 46);
+    font-weight: 900;
+    font-size: 22px;
+    font-family: cursive;   
+    position:relative;
+    right: 0cm;
+}#links a:hover{
+    transition: 1s;
+    color: black;
+    font-size: 25px;
+}
+
+
+nav a{
+    text-decoration: none;
+    color: #f3f2f2;
+    font-size: 20px;
+    padding-right: 20px;
+    font-family: cursive;
+    font-weight: 800;
+
+}nav a:hover{
+    transition: 1s;
+    color:white;
+    font-size: 30px;
+}
+.nav-2{
+    display: flex;
+    justify-content: center;
+    background-color: #723195;
+    height: 80px;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+#inicio a, #comprar a, #sobrenosotros a,#perros a, #gatos a{
+    padding: 30px;
+    font-size: 25px;
+    color: #f3f2f2;
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: 800;
+}
+#inicio a:hover, #comprar a:hover, #sobrenosotros a:hover,#perros a:hover, #gatos a:hover{
+    transition: 1s;
+    font-size: 30px;
+}
+
+#mapagoogle{
+    position: relative;
+    left: 11cm;
+}
+
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+/*Responsive*/
+@media (max-width:700px){
+    header a{
+        font-size: 12px;
+    }header a:hover{
+        font-size: 12px;
+        color: white;
+    }
+    #carrito{
+        position: fixed;
+        top: 10px;
+        right: 0.5%;
+    }
+
+   
+
+    #inicio a, #comprar a, #perros a, #gatos a{
+    padding: 15px;
+    font-size: 15px;
+    }#inicio a:hover, #comprar a:hover,#perros a:hover, #gatos a:hover{
+        font-size: 15px;
+        color: white;
+    }
+
+    #links a{
+        font-size: 15px;
+        position: relative;
+        left: 15px;
+        bottom: -15px;
+    }
+    footer{
+        position: fixed;
+        bottom: 1px;
+        width: 100%;
+    }
+    #copy{
+        font-size: 12px;
+        position: relative;
+        bottom: -10px;
+        left: 60px;
+    }
+    #royal{
+        height: 20px;
+    }
+    
+
+}
+
+
+/*Responsive IMG, mapa*/
+@media (max-width:1200px){
+    #royal{
+        height: 80px;
+        justify-content: space-between;
+        padding-right: 10px;   
+    }
+
+    #mapagoogle{
+        position: relative;
+        left: 6cm;
+        height: 400px;
+        width: 520px;
+    }
+    @media (max-width:750px){
+        #mapagoogle{
+            position: relative;
+            left: 1cm;
+            height: 350px;
+            width: 420px;
+        }
+    }@media (max-width:995px){
+        #royal{
+            height: 70px;
+            position: relative;
+            left: -4cm;
+        }
+    }@media (max-width:780px){
+        #royal{
+            height: 55px;
+            position: relative;
+            left: -6cm;
+        }
+        .center{
+            display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 70%;
+        }
+        
+    }@media (max-width:540px){
+        #royal{
+            height: 50px;
+            position: relative;
+            left: -6cm;
+        }
+    }@media (max-width:490px){
+        #royal{
+            height: 50px;
+            position: relative;
+            left: -6cm;
+            margin-bottom: 15px;
+        }
+        .center{
+            display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+        }
+        
+    }
+
+
+}
+
+
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+    color: white;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: #43145c;
+	background: #43145c;
+	background: #43145c;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #ca850e; }
+
+/* ----- -----  Diseño para formulario nuevo               ------------------------------------                   ----- ----- */
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 70px;
+    font-family: cursive;
+    color: #ffffff;
+    box-shadow: #43145c 7px 13px 37px;
+    background: #784c91;
+}
+
+
+
+/* ----- -----  Cursor /puntero /click----- ----- */
+*{
+    cursor: url("img/cursor.png"), auto;
+}
+a{
+    cursor: url("img/cursorpuntero.png"), auto;
+}

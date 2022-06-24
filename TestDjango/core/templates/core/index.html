@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet"  href='{% static "core/style.css" %}' >
+  <title>Inicio - Mascotitas</title>
+</head>
+<body>
+  
+  <header>
+    {% load static %}
+      <div class="logo">
+          <img id="huella" src="{% static 'core/img/huella.png' %}" alt="">
+          <a href="#" id="mascotitas" >Mascotitas</a>
+      </div>
+      <nav>
+        
+        <a href="login" class="nav-links">Login</a>
+        <a href="registro" class="nav-links">Registrarse</a >
+        <a href="carrito"><span id="carrito" class="material-icons">&#xe8cc</span></a>
+      </nav>
+  </header>
+  {% load static %}
+  <div class="nav-2">
+    <div id="inicio">
+      <a href="#">Inicio</a>
+    </div>
+    <div id="comprar">
+      <a href="comprar">Comprar</a>  
+    </div>
+
+
+  </div>
+
+  <center>
+    <div class="bx-wrapper" style="width: 750px; height: 300px;">
+      <div class="slider">
+        <div style="width: 30cm"><img src="{% static 'core/img/Slider/background-gris.png' %}" alt="" style="width: 25cm; height: 8cm;"></div>
+        <div><img src="{% static 'core/img/Slider/fondo2.jpg' %}" alt="" style="width: 25cm; height: 8cm;"></div>
+        <div><img src="{% static 'core/img/Slider/mapaUbicanos2.jpg' %}" alt="" style="width: 25cm; height: 8cm;"></div>
+      </div>
+    
+    </div>
+
+  </center>
+
+
+  <br><br>
+<div class="container">
+  <h2 style="text-align: center;font-weight: 800; color: #4b1767;">Algunas opiniones de clientes recientes:</h2>
+  <div class="row row-cols-">
+    <div class="col"  style="border: 4px solid black"><img src="{% static 'core/img/person1.jpg' %}" alt="" style="height: 40px;"> <br>
+    <h5 style="text-align: center;">Juan Antonio Pizarro</h5> <br>
+    <p style="font-size: 15px;">Excelente atención al cliente al momento de tener una duda, una experiencia grata! </p> </div>
+    <div class="col"  style="border: 4px solid black"><img src="{% static 'core/img/person2.jpg' %}" alt="" style="height: 40px;"> <br>
+    <h5 style="text-align: center;">Ana Maria Fernandez</h5> <br>
+    <p style="font-size: 15px;">El despacho fue bastante rápido y dentro del lapso de tiempo prometido, excelente.</p></div>
+  <div class="col" style="border: 4px solid black"><img src="{% static 'core/img/person3.jpg' %}" alt="" style="height: 40px;"> <br>
+    <h5 style="text-align: center;">David Roberto Paredes</h5><br>
+    <p style="font-size: 15px;">Para llevar poco tiempo en el negocio, tienen buena organización presencialmente, y venta online muy buena!</p></div>
+  </div>
+
+</div>
+  <br><br>
+
+    <h2 style="text-align: center;font-weight: 800; color: #4b1767;">Marcas Colaboradoras</h2>
+    {% load static %}
+      <div class="container" style="margin-bottom: 2cm;" id="marcas">
+          <a href="https://www.royalcanin.com/cl" target="_blank"><img id="royal" src="{% static 'core/img/Royal-Canin-Logo.jpg' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+          <a href="https://www.hillspet.cl" target="_blank"><img id="royal" src="{% static 'core/img/Hills-logo.jpg' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+          <a href="https://www.eukanuba.com/cl" target="_blank"><img id="royal" src="{% static 'core/img/Logo-Eukanuba.jpg' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+          <a href="https://www.purina-latam.com/cl/purina" target="_blank"><img id="royal" src="{% static 'core/img/purina.png' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+          <a href="https://www.whiskas.cl" target="_blank"><img id="royal" src="{% static 'core/img/Whiskas-logo.png' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+          <a href="https://www.championdog.cl" target="_blank"><img id="royal" src="{% static 'core/img/LogoChampionDog-01.png' %}" alt="" style="padding-right: 12px; border-radius: 25%;"></a>
+      </div>
+
+      <h4 style="font-family: 'Gochi Hand', cursive; text-align: center; margin-bottom: 20px; color: #4b1767;">Mascotitas es una tienda online y presencial dedicada a la venta de productos para mascotas, busca el tuyo al mejor precio y hazla feliz!</h4>
+
+  <br><br><b><br>
+ 
+  <footer>
+    <div class="container"> 
+        <div class="col">
+          <div id="links">
+            <a href="sobrenosotros">Sobre Nosotros.</a><br>
+            <a href="ubicanos">¡Ubícanos!</a>
+         </div>       
+        </div>
+        <div class="col">
+           <a href="https://instagram.com"><img id="insta" src="{% static 'core/img/insta.png' %}" alt="" style="height: 40px; padding-right: 10px; position: relative; bottom: 25px; right: -30px; float: right;"></a> 
+           <a href="https://facebook.com"><img id="face" src="{% static 'core/img/face.png' %}" alt="" style="height: 40px; padding-right: 5px; position: relative; bottom: 25px; right: -22px; float: right;"></a>
+           <a href="https://twitter.com"><img id="twitter" src="{% static 'core/img/twitter.png' %}" alt="" style="height: 40px; padding-right: 5px; position: relative; bottom: 25px; right: -20px; float: right;"></a>
+          <div id="copy">
+            &copy;Romina,Manuel,Felipe.
+          </div> 
+        </div>        
+        </div>
+      </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+<!--EVENTO MOUSE FOOTER-->
+  <script>
+     var present = document.getElementById("copy");
+    function cambiarn (){
+        present.innerHTML = "<h4 style= 'color: rgb(225, 192, 46)';>Creadores de Proyecto</h4>";
+    }
+    function cambiarn1(){
+      present.innerHTML = "&copy;Romina,Manuel,Felipe.";
+    }
+    present.onmouseover = cambiarn;
+    present.onmouseout = cambiarn1;
+
+
+    //SLIDER INDEX
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        mode: "vertical",
+        auto:true,
+        pause: 2500
+      });
+    });
+  </script>
+</body>
+</html>
